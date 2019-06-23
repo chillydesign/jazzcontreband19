@@ -1,3 +1,3 @@
-# Wordpress Theme for JazzContreband 2018
+# Wordpress Theme for JazzContreband 2019
 
-Wordpress Theme for JazzContreband 2018 made by Webfactor.ch.
+Wordpress Theme for JazzContreband 2019 made by Webfactor.ch.
