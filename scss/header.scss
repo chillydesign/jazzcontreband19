@@ -211,7 +211,6 @@ header {
       //   }
     }
     @media (min-width: $mobile_width) {
-      top: -30px;
     }
   }
 
@@ -248,13 +247,11 @@ header {
     height: 100%;
     background: no-repeat center center;
     background-size: cover;
-    opacity: 0.4;
-    filter: grayscale(1) blur(100px);
-    animation: unBlur 5s forwards;
+    // opacity: 0.4;
+    // filter: grayscale(1) blur(100px);
+    // animation: unBlur 5s forwards;
     &.event_bg {
       opacity: 0.6;
-      // animation: none;
-      // filter: none;
     }
   }
 }
