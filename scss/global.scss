@@ -71,6 +71,7 @@ body {
 }
 
 .green_box,
+.grey_box,
 .yellow_box,
 .blue_box,
 .black_box,
@@ -157,6 +158,32 @@ body {
 .yellow_box,
 .yellow_event {
   background: $yellow;
+  color: $black;
+
+  .bordered_title,
+  h1 {
+    border-color: $black;
+  }
+
+  a,
+  a:hover,
+  a:active,
+  a:visited,
+  a:link {
+    color: $black;
+  }
+  hr {
+    border-bottom-color: $black;
+  }
+  h6 a,
+  a h6 {
+    color: white !important;
+  }
+}
+
+.grey_box,
+.grey_event {
+  background: $medium_grey;
   color: $black;
 
   .bordered_title,

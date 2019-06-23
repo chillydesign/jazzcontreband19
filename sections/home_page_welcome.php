@@ -4,8 +4,8 @@ $tdu = get_template_directory_uri();
 $content =  get_sub_field('content');
 $numbers =  get_sub_field('numbers');
 $image =  get_sub_field('image');
-$yellow_box_content =  get_sub_field('yellow_box_content');
-$blue_box_content =  get_sub_field('blue_box_content');
+$small_top_box_content =  get_sub_field('yellow_box_content');
+$small_bottom_box_content =  get_sub_field('blue_box_content');
 
 $today = date("Ymd");
 $events = 	new WP_Query(array(
@@ -49,7 +49,7 @@ $events = 	new WP_Query(array(
     <div class="column_container column_container_reversed">
 
         <div id="about_jazzcontreband" class=" column big_column ">
-            <div class="green_box">
+            <div class="yellow_box">
 
                 <?php if ($numbers): ?>
                 <div class="column_container" id="big_infos">
@@ -71,10 +71,10 @@ $events = 	new WP_Query(array(
         </div>
 
         <div id="agenda_front" class="column small_column ">
-            <div class="yellow_box">
+            <div class="grey_box">
                 <hr  />
-            <?php if ($yellow_box_content) : ?>
-                <?php echo $yellow_box_content; ?>
+            <?php if ($small_top_box_content) : ?>
+                <?php echo $small_top_box_content; ?>
             <?php else: ?>
 
                 <h2>Prochainement</h2>
@@ -101,11 +101,11 @@ $events = 	new WP_Query(array(
 
             </div>
 
-            <?php if ($blue_box_content) : ?>
+            <?php if ($small_bottom_box_content) : ?>
 
                 <div class="blue_box" >
                     <hr  />
-                    <?php echo $blue_box_content; ?>
+                    <?php echo $small_bottom_box_content; ?>
             </div>
             <?php endif; ?>
         </div>
