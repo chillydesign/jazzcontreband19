@@ -1,0 +1,48 @@
+
+
+
+<ul id="events">
+
+<%  _.each(events,function(event,key,list){  %>
+
+<% if(event.date_title){  %>
+	<li class="green_box">
+		<h2><%= event.date_title %></h2>
+	</li>
+
+<% } %>
+
+		<li  class="blue_box">
+        <a href = " <%= event.guid %>">
+				<div class="column_container">
+					<div class="column small_column ">
+						<div class="event_image" style="background-image:url('<%= event.thumbnail %>');"></div>
+					</div>
+					<div class="column big_column ">
+						<div class="prog_evnt_details">
+                            <h3><%= event.post_title %></h3>
+							<% if(event.nice_date){  %><p><i class="fa fa-calendar" aria-hidden="true"></i>  <%= event.nice_date %></p><% } %>
+							<% if(event.time){  %><p><i class="fa fa-clock-o" aria-hidden="true"></i>  <%= event.time %></p><% } %>
+							<% if(event.member){  %><p><i class="fa fa-map-marker" aria-hidden="true"></i>  <%= event.member.post_title %></p><% } %>
+							<% if(event.styles){  %><p><i class="fa fa-tags" aria-hidden="true"></i>  <%= event.styles %></p><% } %>
+						</div>
+					</div>
+				</div>
+            	</a>
+		</li>
+
+
+<% }) %>
+
+
+<%  if ( events.length == 0 ) { %>
+		<li class="reperage_box stripes">
+		<h3>Aucun évènement trouvé</h3>
+		</li>
+<% } %>
+
+</ul>
+
+<%  if ( events.length > 5 ) { %>
+<p><a href="#" id="back_to_top">&#8593; Retour en haut</a></p>
+<% } %>

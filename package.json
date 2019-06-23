@@ -1,0 +1,44 @@
+{
+  "name": "jazzcontreband18",
+  "version": "0.0.1",
+  "description": "This is the wordpress theme for jazzcontreband for 2018.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "say test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chillydesign/jazzcontreband18.git"
+  },
+  "keywords": [
+    "wordpress",
+    "webfactor",
+    "blank",
+    "theme"
+  ],
+  "author": "Charles Harvey",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chillydesign/jazzcontreband18/issues"
+  },
+  "homepage": "https://github.com/chillydesign/jazzcontreband18#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "cryptiles": ">=4.1.2",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-image-resize": "^0.13.0",
+    "gulp-minify": "^3.0.15",
+    "gulp-sass": "^4.0.1",
+    "gulp-watch": "^5.0.1",
+    "hoek": ">=4.2.1",
+    "hygen": "^1.6.2",
+    "lodash": ">=4.17.5",
+    "webpack": "^4.12.1",
+    "webpack-cli": "^3.0.8"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 3 versions"
+  ]
+}

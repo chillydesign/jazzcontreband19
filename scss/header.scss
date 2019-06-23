@@ -1,0 +1,320 @@
+
+
+
+nav {
+    background: $brand_color;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    z-index: 100;
+    background: url('../img/warning_line.svg') repeat-x top center;
+    background-size: 62px 52px;
+
+    a#menu_button {
+        display: block;
+        background: url('../img/menu.svg') no-repeat center center;
+        background-size: 30px;
+        text-indent: -9999px;
+        height: 30px;
+        width: 30px;
+        position: absolute;
+        top:35px;
+        right: 20px;
+        z-index: 100;
+
+        @media (min-width: $mobile_width) {
+            display: none;
+        }
+    }
+
+
+    $menu_width:300px;
+
+    ul#menu_navigation {
+        position: fixed;
+        top:0;
+        bottom: 0;
+        right: 0;
+        height: auto;
+        display: block;
+        padding: 50px 0 0;
+        transform: translateX( $menu_width );
+        text-transform: uppercase;
+        width:  $menu_width;
+        background: transparentize($brand_color, 0.06);
+        text-align: left;
+        transition: all 0.3s;
+        overflow-y: scroll;
+
+        @media (min-width: $mobile_width) {
+          overflow-y: visible;
+            width: auto;
+            background: white;
+            display: inline-block;
+            position: relative;
+            top: 25px;
+            right: auto;
+            bottom: auto;
+            padding: 0 20px;
+            text-align: center;
+            transform: none;
+
+        }
+
+
+        &.show_menu {
+            transform: translateX( 0 );
+        }
+
+        li {
+            display: block;
+            margin: 0;
+            padding: 0;
+            font-size: 1.2em;
+            font-weight: bold;
+
+            @media (min-width: $mobile_width) {
+                display: inline-block;
+            }
+
+
+            a {
+                display: block;
+                padding: 15px 25px;
+                text-decoration: none;
+
+
+                @media (min-width: $mobile_width) {
+                    padding: 15px 15px;
+                }
+
+                &:link, &:active, &:hover, &:visited {
+                    color: white;
+                    border: 0;
+
+                    @media (min-width: $mobile_width) {
+                        color: $brand_color;
+                    }
+                }
+                &:hover {
+                    background: transparentize(darken($brand_color, 10), 0.7);
+                }
+
+
+            } // end of ul li a
+
+            &:hover {
+                ul {
+                    display: block;
+                }
+            }
+
+            ul {
+
+                li {
+                    font-size: 1em;
+                    padding-left: 20px;
+                }
+
+                @media (min-width: $mobile_width) {
+                    position: absolute;
+                    top: 99%;
+                    width: 200px;
+                    display: none;
+                    text-align: left;
+
+                    li {
+                        display: block;
+                        padding: 0;
+                        a {
+                            display: block;
+                            background: $yellow;
+                            font-size: 90%;
+                            padding: 10px;
+                            &:hover {
+                                background: darken($yellow, 10);
+                            }
+                        }
+                    }
+                }
+            } // end of ul li ul
+
+        }
+    }
+}
+
+
+//header only for homepage
+body.home {
+    header {
+
+    }
+}
+
+
+
+header {
+    padding:30px 0 0;
+    margin: 0 0 30px;
+    position: relative;
+    background: $brand_color;
+
+
+    .branding {
+        padding: 0px 0;
+        margin: -20px 0 30px;
+        height: 300px;
+        position: relative;
+        z-index: 5;
+        text-align: center;
+        display: block;
+        transform: scale(0.6);
+
+        @media (min-width: $mobile_width) {
+                    transform: scale(1);
+                    margin: 0 0 30px;
+                    height: 400px;
+
+        }
+
+
+        span {
+            display: block;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: top center;
+            width: 100%;
+            height: 150px;
+            text-indent: -9999px;
+            position: relative;
+            top:0;
+            z-index: 1;
+
+            @media (min-width: $mobile_width) {
+                width: 400px;
+                position: absolute;
+            }
+
+            &.logo_jazz {
+                background-image:  url('../img/jazz.svg');
+                height: 250px;
+            }
+            &.logo_contre {
+                background-image:  url('../img/contre.svg');
+                top: -70px;
+                z-index: 2;
+                @media (min-width: $mobile_width) {
+                    left: -100px;
+                    top: 180px;
+                }
+            }
+            &.logo_band {
+                background-image:  url('../img/band.svg');
+                top: -100px;
+                z-index: 3;
+
+                @media (min-width: $mobile_width) {
+                    top: 230px;
+                    left: 60px;
+                }
+            }
+
+        }
+        @media (min-width: $mobile_width) {
+            top: -30px;
+        }
+    }
+
+
+
+
+
+
+
+    #date_box_container {
+
+        text-align: center;
+        @media (min-width: $mobile_width) {
+            text-align: right;
+        }
+    }
+
+        #date_box {
+            background: $yellow;
+            padding: 10px 50px 50px 10px;
+            color: $black;
+            display: inline-block;
+            font-weight: bold;
+            font-size: 4em;
+            line-height: 1;
+            text-align: left;
+            transform: rotate(-10deg);
+            position: relative;
+            top: 00px;
+            z-index: 4;
+            @media (min-width: $mobile_width) {
+                top: 30px;
+                right: 60px;
+            }
+        }
+
+
+
+        $road_sign_size: 200px;
+        #road_sign {
+            display: none;
+            background: url('../img/road_sign.svg') no-repeat center center;
+            background-size: cover;
+            height: $road_sign_size;
+            width: $road_sign_size;
+            bottom:100px;
+            right: 70px;
+            z-index: 3;
+            position: absolute;
+
+
+            @media (min-width: $mobile_width) {
+                display: block;
+            }
+        }
+        $octagon_size: 150px;
+        #octagon {
+            display: none;
+            background: url('../img/octagon.svg') no-repeat center center;
+            background-size: cover;
+            height: $octagon_size;
+            width: $octagon_size;
+            position: absolute;
+            bottom:20px;
+            left: 130px;
+            z-index: 30;
+
+            @media (min-width: $mobile_width) {
+                    display: block;
+            }
+        }
+
+
+
+        #header_background {
+            position: absolute;
+            top:0;
+            left: 0;
+            z-index: 0;
+            width: 100%;
+            height: 100%;
+            background: no-repeat center center;
+            background-size: cover;
+            opacity: 0.4;
+            filter: grayscale(1) blur(100px)  ;
+            animation: unBlur 5s forwards;
+            &.event_bg {
+                opacity: 0.6;
+                // animation: none;
+                // filter: none;
+            }
+        }
+
+
+}
