@@ -181,33 +181,34 @@ header {
       }
 
       &.logo_jcb {
-        background-image: url("../img/logo_black.svg");
+        background-image: url("../img/logo_white.svg");
         height: 336px;
+        top: 50px;
       }
 
-      &.logo_jazz {
-        background-image: url("../img/jazz.svg");
-        height: 250px;
-      }
-      &.logo_contre {
-        background-image: url("../img/contre.svg");
-        top: -70px;
-        z-index: 2;
-        @media (min-width: $mobile_width) {
-          left: -100px;
-          top: 180px;
-        }
-      }
-      &.logo_band {
-        background-image: url("../img/band.svg");
-        top: -100px;
-        z-index: 3;
+      //   &.logo_jazz {
+      //     background-image: url("../img/jazz.svg");
+      //     height: 250px;
+      //   }
+      //   &.logo_contre {
+      //     background-image: url("../img/contre.svg");
+      //     top: -70px;
+      //     z-index: 2;
+      //     @media (min-width: $mobile_width) {
+      //       left: -100px;
+      //       top: 180px;
+      //     }
+      //   }
+      //   &.logo_band {
+      //     background-image: url("../img/band.svg");
+      //     top: -100px;
+      //     z-index: 3;
 
-        @media (min-width: $mobile_width) {
-          top: 230px;
-          left: 60px;
-        }
-      }
+      //     @media (min-width: $mobile_width) {
+      //       top: 230px;
+      //       left: 60px;
+      //     }
+      //   }
     }
     @media (min-width: $mobile_width) {
       top: -30px;
@@ -215,26 +216,26 @@ header {
   }
 
   #date_box_container {
-    text-align: center;
-    @media (min-width: $mobile_width) {
-      text-align: right;
-    }
+    position: relative;
   }
 
   #date_box {
+    text-align: left;
     background: url("../img/date_yellow_white.svg") no-repeat center center;
-    background-size: cover;
+    background-size: contain;
     text-indent: -9999px;
     min-width: 300px;
-    max-width: 600px;
+    max-width: 400px;
     width: 100%;
     height: 300px;
     position: relative;
     top: 00px;
+    right: 0;
     z-index: 4;
     @media (min-width: $mobile_width) {
-      top: 30px;
-      right: 60px;
+      position: absolute;
+      top: 00px;
+      right: 00px;
     }
   }
 
