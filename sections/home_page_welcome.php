@@ -32,12 +32,11 @@ $events = 	new WP_Query(array(
                 <?php get_template_part( 'partials/logo' ); ?>
             </div>
             <div class="column big_column" id="date_box_container">
-                <div id="date_box">1→29. <br> 10.2019</div>
+                <div id="date_box">01-29. 10.2019 CH/FR</div>
             </div>
         </div>
 
-        <div id="road_sign"></div>
-        <div id="octagon"></div>
+ 
     </div>
 
 

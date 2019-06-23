@@ -1,5 +1,3 @@
-
-
 @import "./variables";
 @import "./reset";
 
@@ -12,33 +10,22 @@
 
 @import "./calendar";
 
-
-
-
-
-
-
-
-
-@media (min-width: $mobile_width) { }
-@media (min-width: $tablet_width) { }
-@media (min-width: 1200px) { }
-
+@media (min-width: $mobile_width) {
+}
+@media (min-width: $tablet_width) {
+}
+@media (min-width: 1200px) {
+}
 
 body {
-  font: normal 62.5%  $font_stack;
+  font: normal 62.5% $font_stack;
   background: white;
   position: relative;
   color: $font_color;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
 }
-
-
-
-
 
 .column_container {
   display: flex;
@@ -62,50 +49,48 @@ body {
   width: 100%;
   padding: 0 20px;
 
-
   &.big_column {
-
     @media (min-width: $mobile_width) {
       width: 60%;
     }
   }
 
-
   &.small_column {
-
     @media (min-width: $mobile_width) {
       width: 40%;
     }
-
-
   }
-
 }
 
-
-
 .download_columns {
-  justify-content:  flex-start;
+  justify-content: flex-start;
   .column {
     padding: 0;
     max-width: 33.333%;
-
   }
 }
 
-.green_box, .yellow_box, .blue_box, .black_box, .white_box {
+.green_box,
+.yellow_box,
+.blue_box,
+.black_box,
+.white_box {
   padding: 20px 50px;
   margin: 0 0;
 
-  .bordered_title, h1 {
+  .bordered_title,
+  h1 {
     border-top: 3px solid white;
     border-bottom: 3px solid white;
     padding: 15px 0;
     margin: 20px 0 30px;
   }
 }
-.white_box {padding: 50px 0 50px;}
-.blue_box, .blue_event {
+.white_box {
+  padding: 50px 0 50px;
+}
+.blue_box,
+.blue_event {
   background: $blue;
   color: white;
   .bordered_title {
@@ -114,68 +99,92 @@ body {
   hr {
     border-bottom-color: $yellow;
   }
-  a, a:hover, a:active, a:visited, a:link {
+  a,
+  a:hover,
+  a:active,
+  a:visited,
+  a:link {
     color: white;
   }
 
-  h6 a, a h6 {
+  h6 a,
+  a h6 {
     background: $yellow;
     color: $black !important;
   }
 }
 
-.green_box, .green_event {
+.green_box,
+.green_event {
   background: $green;
   color: white;
-  .bordered_title, h1 {
+  .bordered_title,
+  h1 {
     border-color: $yellow;
   }
   hr {
     border-bottom-color: $yellow;
   }
-  a, a:hover, a:active, a:visited, a:link {
+  a,
+  a:hover,
+  a:active,
+  a:visited,
+  a:link {
     color: white;
   }
 }
 
-.black_box, .black_event {
+.black_box,
+.black_event {
   background: $black;
   color: white;
-  .bordered_title, h1 {
+  .bordered_title,
+  h1 {
     border-color: white;
   }
   hr {
     border-bottom-color: white;
   }
-  a, a:hover, a:active, a:visited, a:link {
+  a,
+  a:hover,
+  a:active,
+  a:visited,
+  a:link {
     color: white;
   }
 }
 
-
-.yellow_box, .yellow_event {
+.yellow_box,
+.yellow_event {
   background: $yellow;
   color: $black;
 
-  .bordered_title, h1 {
+  .bordered_title,
+  h1 {
     border-color: $black;
   }
 
-  a, a:hover, a:active, a:visited, a:link {
+  a,
+  a:hover,
+  a:active,
+  a:visited,
+  a:link {
     color: $black;
   }
   hr {
     border-bottom-color: $black;
   }
-  h6 a, a h6 {
+  h6 a,
+  a h6 {
     color: white !important;
   }
 }
 
-h2 + hr{ margin: -10px 0 20px;}
+h2 + hr {
+  margin: -10px 0 20px;
+}
 
-
-section  {
+section {
   img {
     width: 100%;
     height: auto;
@@ -183,9 +192,7 @@ section  {
   }
 }
 
-
 #about_jazzcontreband {
-
   position: relative;
   top: -50px;
 
@@ -194,7 +201,8 @@ section  {
     margin-bottom: -150px;
   }
 
-  h2, h3 {
+  h2,
+  h3 {
     color: white;
   }
 
@@ -216,7 +224,6 @@ section  {
     font-size: #{$font_size * 0.8};
     letter-spacing: 3px;
 
-
     @media (min-width: $mobile_width) {
       font-size: $font_size;
     }
@@ -237,10 +244,9 @@ section  {
 }
 
 #agenda_front {
-
   position: relative;
   z-index: 10;
-  a{
+  a {
     text-decoration: none;
   }
 
@@ -249,10 +255,9 @@ section  {
   }
 
   .blue_box {
-      margin-top: 40px;
+    margin-top: 40px;
   }
 }
-
 
 #featured_event {
   margin: 130px 0 40px;
@@ -269,7 +274,7 @@ section  {
   }
   #featured_image {
     padding: 30px 0 0px;
-    margin: -70px 0 0 ;
+    margin: -70px 0 0;
     @media (min-width: $mobile_width) {
       width: 55%;
       padding: 30px 0;
@@ -277,7 +282,6 @@ section  {
     }
   }
   #featured_text {
-
     @media (min-width: $mobile_width) {
       width: 40%;
       padding: 35px 0 0;
@@ -298,11 +302,10 @@ section  {
   }
 }
 
-
 #rotated_warning_line_container {
   overflow-x: hidden;
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
@@ -310,16 +313,14 @@ section  {
 }
 
 #rotated_warning_line {
-  background: url('../img/warning_line.svg') repeat-x top center;
+  background: url("../img/warning_line.svg") repeat-x top center;
   background-size: 124px 80px;
   width: 300%;
   height: 124px;
   transform: rotate(-20deg);
   left: -500px;
-  top:30%;
+  top: 30%;
   position: absolute;
-
-
 }
 
 .upcoming_event {
@@ -342,8 +343,6 @@ section  {
   // &.upcoming_event_green { color: $green; }
 }
 
-
-
 #event_information {
   position: relative;
   top: -20px;
@@ -354,13 +353,13 @@ section  {
   }
 
   .event_styles {
-    margin: 0 -10px ;
+    margin: 0 -10px;
     padding: 0 0 10px;
   }
   .event_meta {
     display: inline-block;
     padding: 0 10px;
-    border-right: 2px solid transparentize(white,0.5);
+    border-right: 2px solid transparentize(white, 0.5);
 
     &:last-child {
       border-right: 0;
@@ -377,39 +376,34 @@ section  {
   }
 }
 
-
 #minor_artist {
   font-size: 80%;
   margin-top: 40px;
 }
 
-
 #map_section {
   margin: 0px 0 30px;
 
-  &.single_evnt_map{
+  &.single_evnt_map {
     margin-top: 40px;
   }
 }
 
-
-
 /*MEMBERS MAP*/
 #member_map_container {
   height: 400px;
-  width:100%;
+  width: 100%;
   background: #f1f1f1;
 }
 
-
 a.member_link {
   text-decoration: none;
-  h4{
+  h4 {
     font-size: 3.1em;
     padding: 0 0 0px;
     text-transform: uppercase;
   }
-  div{
+  div {
     margin-bottom: -30px;
   }
 }
@@ -425,7 +419,7 @@ a.member_link {
 }
 
 .pricing {
-  p{
+  p {
     padding-bottom: 0;
   }
   h6 {
@@ -433,38 +427,36 @@ a.member_link {
   }
 }
 
-
 .loading {
   animation: spin 1s linear infinite;
-  width:20px;
+  width: 20px;
   display: inline-block;
   height: 20px;
-  border:3px solid $primary-color;
+  border: 3px solid $primary-color;
   border-radius: 7px;
   position: relative;
   text-align: center;
   margin: auto;
   overflow: hidden;
 
-  &:after, &:before {
+  &:after,
+  &:before {
     @extend .loading;
-    content:'';
+    content: "";
     opacity: 0.6;
-    position:absolute;
-    top:5px;
+    position: absolute;
+    top: 5px;
     left: 5px;
     width: 14px;
     height: 14px;
   }
   &:before {
-    bottom:5px;
-    top:auto;
-    left:auto;
-    right:5px;
+    bottom: 5px;
+    top: auto;
+    left: auto;
+    right: 5px;
   }
 }
-
-
 
 ul#events {
   li {
@@ -475,9 +467,9 @@ ul#events {
       color: white;
       text-decoration: none;
     }
-    h3 {
+    // h3 {
 
-    }
+    // }
     .column {
       padding: 0;
     }
@@ -486,23 +478,21 @@ ul#events {
       padding: 0;
     }
     .event_image {
-      background: no-repeat center center transparentize(white,0.5);
+      background: no-repeat center center transparentize(white, 0.5);
       background-size: cover;
       height: 155px;
-      width:100%;
+      width: 100%;
     }
     .prog_evnt_details {
       padding: 0 0 0 20px;
     }
   }
   li.green_box {
-    padding:20px 20px 0;
+    padding: 20px 20px 0;
   }
 }
 
-
 #programme_container {
-
   margin-top: 80px;
 
   #calendar_box {
@@ -511,22 +501,20 @@ ul#events {
   }
 }
 
-
 .section_upcoming {
   position: relative;
-  a{
+  a {
     text-decoration: none;
   }
   .upcoming {
-
-    h2{
+    h2 {
       text-transform: uppercase;
       font-size: 3em;
       font-weight: bold;
     }
   }
 
-  #prochainement{
+  #prochainement {
     width: 57px;
     display: inline-block;
     vertical-align: baseline;
@@ -535,7 +523,7 @@ ul#events {
     color: white;
     bottom: 0;
     top: 0;
-    h3{
+    h3 {
       transform: rotate(-90deg);
       font-size: 3.3em;
       position: absolute;
@@ -552,14 +540,13 @@ ul#events {
     margin-left: 60px;
     margin-bottom: 0;
     min-height: 350px;
-    .column_container{
+    .column_container {
       background: black;
       justify-content: start;
 
       .upcoming_event_column {
         padding: 0;
         min-height: 350px;
-
 
         .event_thumb {
           background: no-repeat top center;
@@ -580,45 +567,39 @@ ul#events {
         }
       }
     }
-
   }
-
 }
 
 .scroll_column_container {
   overflow: scroll;
-  .upcoming_event_column{
-      min-width: 300px!important;
+  .upcoming_event_column {
+    min-width: 300px !important;
   }
-  @media (min-width:$mobile_width) {
-    .upcoming_event_column{
+  @media (min-width: $mobile_width) {
+    .upcoming_event_column {
       max-width: 51%;
     }
   }
-  @media (min-width:$tablet_width) {
-    .upcoming_event_column{
+  @media (min-width: $tablet_width) {
+    .upcoming_event_column {
       max-width: 34%;
     }
   }
 }
 
-
 #reperages {
   #reperages_container {
-
     .column {
       padding: 0;
       width: auto;
-
     }
     .info-group {
-
       padding-bottom: 10px;
       span {
         margin-right: 5px;
       }
       span:before {
-        content: '|';
+        content: "|";
         display: inline-block;
         margin-right: 5px;
       }
@@ -628,7 +609,6 @@ ul#events {
     }
 
     .contact {
-
       span {
         margin-right: 10px;
         display: inline-block;
@@ -638,7 +618,7 @@ ul#events {
       }
       .adresse {
         display: block;
-        p{
+        p {
           font-size: 1em;
           display: inline-block;
           padding-bottom: 0;
@@ -683,14 +663,10 @@ ul#events {
   margin-bottom: 40px;
 }
 
-
-
 .event_thumb {
   background: no-repeat center center;
   background-size: cover;
 }
-
-
 
 /*Partenaires*/
 
@@ -698,8 +674,9 @@ section.section.section_partners {
   padding: 20px 0;
 }
 
-
-.bx-wrapper {margin: auto;}
+.bx-wrapper {
+  margin: auto;
+}
 #partner_logos {
   text-align: center;
   margin: auto;
@@ -714,27 +691,24 @@ section.section.section_partners {
   height: 100px;
 }
 
-
 ///General styles
 
 span.drop_cap {
-    font-size: 2em;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin: 7px 5px 0px 0;
-    display: inline-block;
-    line-height: 1;
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 7px 5px 0px 0;
+  display: inline-block;
+  line-height: 1;
 
-    @media (min-width: $mobile_width) {
-        font-size: 3em;
-    }
-
+  @media (min-width: $mobile_width) {
+    font-size: 3em;
+  }
 }
 
 .featured_box {
   margin: 20px 0 50px 20px;
 }
-
 
 .event_gallery {
   position: relative;
@@ -743,7 +717,6 @@ span.drop_cap {
   width: 100%;
   margin: 0 0 50px;
 
-
   @media (min-width: $mobile_width) {
     overflow: hidden;
   }
@@ -751,7 +724,6 @@ span.drop_cap {
   // .event_thumb {}
 
   .upcoming_description {
-
     padding: 10px;
     background: $yellow;
     color: $black;
@@ -767,10 +739,8 @@ span.drop_cap {
       padding: 0;
       font-size: 2.3em;
     }
-
   }
 }
-
 
 .press_container {
   margin: 20px 0 10px;
@@ -801,20 +771,18 @@ span.drop_cap {
   }
 }
 
-
-
 .loginformcontainer {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
   z-index: 999;
   top: 0;
   display: none;
 }
 
-
-.loginform, .lostpasswd {
+.loginform,
+.lostpasswd {
   width: 40%;
   min-width: 250px;
   margin: 100px auto;
@@ -822,12 +790,12 @@ span.drop_cap {
   /*top: -700px;*/
   z-index: 9;
   padding: 50px;
-  box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.8);
-
+  box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.8);
 }
 
-
-.lostpasswd {display: none;}
+.lostpasswd {
+  display: none;
+}
 
 .login-lostpsswd {
   float: right;
@@ -842,13 +810,14 @@ input#rememberme {
   top: 0px;
 }
 
-input#rememberme:checked{
+input#rememberme:checked {
   background-image: url(../img/check.png);
   background-size: 100%;
   background-repeat: no-repeat;
 }
 
-input#wp-submit, input.user-submit {
+input#wp-submit,
+input.user-submit {
   background-color: $primary-color;
   border-radius: $border-radius;
   font-weight: bold;
@@ -859,7 +828,6 @@ input#wp-submit {
   font-size: 1em;
 }
 
-
 .lostpasswd input#user_login {
   margin-bottom: 30px;
 }
@@ -868,13 +836,13 @@ p.forgottenpassword {
   text-align: center;
   margin: -30px 0 -50px;
 }
-p.notforgotten{
+p.notforgotten {
   text-align: center;
   margin-right: 0 0 -50px;
 }
 
-
-label, input {
+label,
+input {
   display: block;
   width: 100%;
   margin-bottom: 15px;
@@ -890,18 +858,20 @@ input.button {
   font-weight: bold;
 }
 
-div.wpcf7{
+div.wpcf7 {
   input {
     font-size: 1.5em;
     padding: 9px;
     border: 0;
   }
 
-  input[type="submit"]{
+  input[type="submit"] {
     cursor: pointer;
     transition: all 0.3s;
     background: $yellow;
-    &:hover, &:focus, &:active {
+    &:hover,
+    &:focus,
+    &:active {
       background: #998f00;
     }
   }
@@ -909,13 +879,13 @@ div.wpcf7{
   h3 {
     margin-top: 30px;
   }
-  p{
+  p {
     padding-bottom: 5px;
   }
   textarea {
     width: 100%;
   }
-  input[type="checkbox"]{
+  input[type="checkbox"] {
     width: 20px;
     height: 20px;
     display: inline-block;
@@ -925,23 +895,23 @@ div.wpcf7{
   }
   span.wpcf7-list-item-label {
     font-size: 1.5em;
-}
+  }
 }
 
 div.wpcf7-response-output {
-    margin: 0;
-    padding: 10px 20px;
-    border: 2px solid #ff0000;
-    background: #ff0000;
+  margin: 0;
+  padding: 10px 20px;
+  border: 2px solid #ff0000;
+  background: #ff0000;
 }
 
 .wpcf7-response-output {
-    font-size: 1.5em;
-    font-weight: bold;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 div.wpcf7-mail-sent-ok {
-    border: 2px solid #398f14;
-    background: #398f14;
-    padding: 10px 20px;
+  border: 2px solid #398f14;
+  background: #398f14;
+  padding: 10px 20px;
 }

@@ -42,7 +42,7 @@
             <nav>
                 <div class="container">
                     <a href="#" id="menu_button">Menu</a>
-                    <ul id="menu_navigation">
+                  <ul id="menu_navigation">
                         <?php chilly_nav('header-menu'); ?>
                         <?php if(is_user_logged_in()) : ?>
                             <?php chilly_nav('loggedin-menu'); ?>
