@@ -39,7 +39,7 @@
 <?php if($post_count >0) : ?>
 <section class="section section_upcoming">
 
-	<div class="blue_box upcoming" style="display:none">
+	<div class="gray_box upcoming" style="display:none">
 	    <div class="container"  style="text-align: center;">
 	        <h2><a href ="<?php echo get_sub_field('link'); ?>">A voir ici</a></h2>
 	        <h6><a href ="<?php echo get_sub_field('link'); ?>"><?php echo get_sub_field('link_text'); ?></a></h6>
@@ -54,7 +54,7 @@
 	<div id="upcoming_events">
 
 	    <div class="column_container scroll_column_container">
-	        <?php $color_classes = [ 'green_event', 'yellow_event', 'blue_event' ]; ?>
+	        <?php $color_classes = [ 'grey_event', 'yellow_event', 'black_event' ]; ?>
 	        <?php $o = 0;	while ( $loop->have_posts() ) : $loop->the_post(); ?>
 	            <div class="column upcoming_event_column <?php echo $color_classes[$o % 3]; $o++ ?> ">
 	                    <a href="<?php the_permalink(); ?>">

@@ -17,7 +17,7 @@
 				    <div class="column_container column_container_reversed">
 
 				        <div id="about_jazzcontreband" class=" column big_column ">
-				                <div class="green_box">
+				                <div class="grey_box">
 													<h1><?php the_title(); ?></h1>
 													<div><?php echo get_field('description'); ?></div>
 				                </div>

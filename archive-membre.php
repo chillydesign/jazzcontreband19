@@ -17,7 +17,7 @@
             </div>
         </div>
         <div class="column">
-            <div class="green_box">
+            <div class="yellow_box">
                 <div id="map_section">
                     <?php echo do_shortcode('[jazz_membres_map]'); ?>
                 </div>

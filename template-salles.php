@@ -47,7 +47,7 @@
                     </div> <!-- END OF YELLOW BOX -->
                 </div> <!--END OF COLUMN -->
                 <div class="column">
-                    <div class="blue_box">
+                    <div class="grey_box">
                         <div class="title">
                             <h2><strong>Salles en Suisse</strong></h2>
                         </div>
@@ -70,7 +70,7 @@
                         ?>
 
                     </div>
-                </div> <!-- END OF BLUE BOX -->
+                </div> <!-- END OF GREY BOX -->
             </div> <!--END OF COLUMN -->
         </div> <!-- END OF COLUMN CONTAINER -->
 

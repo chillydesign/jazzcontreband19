@@ -1,20 +1,18 @@
-$blue: #0068a0;
-$green: #39a935;
+$light_grey: #efefef;
+$medium_grey: #b4b4b4;
+$dark_grey: #444;
+
 $yellow: #ffda31;
 $black: #000000;
 
-$primary_color: $blue;
-$brand_color: $blue;
-$brand_color_hover: darken($blue, 10);
+$primary_color: $yellow;
+$brand_color: $yellow;
+$brand_color_hover: darken($yellow, 10);
 
 $font_stack: "Messina Sans", "Roboto", sans-serif;
 $heading_font_stack: $font_stack;
 $font_size: 1.65em;
 $font_color: #222;
-
-$light_grey: #efefef;
-$medium_grey: #b4b4b4;
-$dark_grey: #444;
 
 $border_radius: 10px;
 

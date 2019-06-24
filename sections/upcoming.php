@@ -19,7 +19,7 @@ $loop = new WP_Query( $args );
 ?>
 
 
-<div class="blue_box upcoming" style="display:none">
+<div class="black_box upcoming" style="display:none">
     <div class="container"  style="text-align: center;">
         <h2><a href ="<?php echo get_sub_field('link'); ?>">Prochainement</a></h2>
         <h6><a href ="<?php echo get_sub_field('link'); ?>"><?php echo get_sub_field('link_text'); ?></a></h6>
@@ -34,7 +34,7 @@ $loop = new WP_Query( $args );
 <div id="upcoming_events">
 
     <div class="column_container">
-        <?php $color_classes = [ 'green_event', 'yellow_event', 'blue_event' ]; ?>
+        <?php $color_classes = [ 'grey_event', 'yellow_event', 'black_event' ]; ?>
         <?php $o = 0;	while ( $loop->have_posts() ) : $loop->the_post(); ?>
             <div class="column upcoming_event_column <?php echo $color_classes[$o]; $o++ ?> ">
                     <a href="<?php the_permalink(); ?>">

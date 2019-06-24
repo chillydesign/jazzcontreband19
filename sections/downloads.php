@@ -1,4 +1,4 @@
-<div class="blue_box">
+<div class="gray_box">
 
 	<div class="container ">
 

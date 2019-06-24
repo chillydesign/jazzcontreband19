@@ -88,7 +88,7 @@ $events = 	new WP_Query(array(
                     <?php $nice_dates =  nice_event_dates($dates) ; ?>
 
                     <hr  />
-                    <div class="upcoming_event upcoming_event_blue">
+                    <div class="upcoming_event ">
                         <h6><?php echo $nice_dates; ?></h6>
                         <p><strong>Something</strong></p>
                         <h4><a href="<?php echo $permalink; ?>"><?php the_title(); ?></a></h4>
@@ -103,7 +103,7 @@ $events = 	new WP_Query(array(
 
             <?php if ($small_bottom_box_content) : ?>
 
-                <div class="blue_box" >
+                <div class="gray_box" >
                     <hr  />
                     <?php echo $small_bottom_box_content; ?>
             </div>

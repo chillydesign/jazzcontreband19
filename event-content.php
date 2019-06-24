@@ -26,7 +26,7 @@
         <div class="column_container column_container_reversed">
 
             <div  id="event_information" class="column big_column ">
-                <div class="green_box">
+                <div class="yellow_box">
 
                     <h1 class="bordered_title"><?php the_title(); ?>
                         <?php if($artist_name): ?>
@@ -123,7 +123,7 @@
                         </div>
                     <?php endif; // end of if hasimage; ?>
 
-                </div> <!-- END OF GREEN BOX -->
+                </div> <!-- END OF YELLOW BOX -->
 
 
 
@@ -205,7 +205,7 @@
                         <?php $website_minor = get_field('website_minor'); ?>
                         <?php $description_minor = get_field('description_minor'); ?>
                         <?php $minor_photo = get_field('photo_minor'); ?>
-                        <div class="blue_box" id="minor_artist">
+                        <div class="grey_box" id="minor_artist">
                             <div class="content event_membres_details">
 
                                 <h2 class="bordered_title"> <?php echo $artist_name_minor; ?></h2>
@@ -247,7 +247,7 @@
                                                         <?php endif; ?>
                                                     </div>
                                                     <?php endif; // end of if $minor_photo; ?>
-                        </div> <!-- END OF blue BOX -->
+                        </div> <!-- END OF grey BOX -->
 
 
 

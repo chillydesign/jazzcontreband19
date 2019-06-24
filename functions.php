@@ -560,7 +560,7 @@ function custom_password_form() {
     $label = 'pwbox-'.( empty( $post->ID ) ? rand() : $post->ID );
     $o = '<form class="protected-post-form" action="' . esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '"
  method="post">
-    ' . __( "<section class=\"section  section_colonnes\"><div class=\"container section1col\"><div class=\"column_container\"><div class=\"sectioncol col-sm-12 white colnmb1\"><div class=\"content\"><h1 style=\"text-align: center;margin-bottom:40px;\">Espace Presse</h1></div></div></div></div></section><section class=\"section  section_colonnes blue_box\" style=\"padding-top:50px;\"><div class=\"container section2col\"><div class=\"column_container\"><div class=\"sectioncol column stripes colnmb1\" style=\"height: 569px;\"><div class=\"title\"><h2><strong>CONNEXION</strong></a></h2></div><div class=\"content\"><p style = \"margin-botton:-10px\">Pour accéder à l’espace presse, merci d’entrer le mot de passe :</p>" ) . '
+    ' . __( "<section class=\"section  section_colonnes\"><div class=\"container section1col\"><div class=\"column_container\"><div class=\"sectioncol col-sm-12 white colnmb1\"><div class=\"content\"><h1 style=\"text-align: center;margin-bottom:40px;\">Espace Presse</h1></div></div></div></div></section><section class=\"section  section_colonnes yellow_box\" style=\"padding-top:50px;\"><div class=\"container section2col\"><div class=\"column_container\"><div class=\"sectioncol column stripes colnmb1\" style=\"height: 569px;\"><div class=\"title\"><h2><strong>CONNEXION</strong></a></h2></div><div class=\"content\"><p style = \"margin-botton:-10px\">Pour accéder à l’espace presse, merci d’entrer le mot de passe :</p>" ) . '
     <label class="pass-label" for="' . $label . '">' . __( "Mot de passe:" ) . ' </label><input name="post_password" id="' . $label . '" type="password" style="background: #ffffff; border:1px solid #999; color:#333333; padding:10px;" size="20" /><input type="submit" name="Submit" class="button" value="' . esc_attr__( "Envoyer" ) . '" />
     </form><p style="font-size:14px;margin:0px;"></div></div><div class="sectioncol column checkers colnmb2"><div class="title"><h2><strong>DEMANDE D\'ACCÈS</strong></h2></div><div class="content"><p>Pour obtenir le code d’accès, veuillez contacter:</p><p><strong>Agathe Denis</strong><br>Coordinatrice JazzContreBand<br>agathe@jazzcontreband.com</p></div></div></div></div></section>
     ';
@@ -634,7 +634,7 @@ function nice_event_dates($dates) {
 
 
 // requred to keep track of what color column we should be using
-$color_classes = ['yellow_box', 'black_box', 'blue_box', 'green_box'];
+$color_classes = ['yellow_box', 'black_box', 'grey_box'];
 $ccc = 0;
 
 

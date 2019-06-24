@@ -6,7 +6,7 @@
 
         <div id="about_jazzcontreband" class=" column big_column ">
             <?php if ($content_right): ?>
-                <div class="green_box">
+                <div class="black_box">
                     <?php echo $content_right; ?>
                 </div>
             <?php endif; ?>

@@ -6,13 +6,13 @@
 <%  _.each(events,function(event,key,list){  %>
 
 <% if(event.date_title){  %>
-	<li class="green_box">
+	<li class="yellow_box">
 		<h2><%= event.date_title %></h2>
 	</li>
 
 <% } %>
 
-		<li  class="blue_box">
+		<li  class="gray_box">
         <a href = " <%= event.guid %>">
 				<div class="column_container">
 					<div class="column small_column ">
