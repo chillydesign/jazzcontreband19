@@ -60,12 +60,12 @@ dt {
 a {
   text-decoration: underline;
   border: 0;
-  color: $brand_color;
+  color: darken($brand_color, 20);
   transition: all 0.3s;
   &:link,
   &:active,
   &:visited {
-    color: $brand_color;
+    color: darken($brand_color, 20);
   }
   &:hover {
     color: $brand_color_hover;
