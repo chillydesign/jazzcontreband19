@@ -179,6 +179,7 @@ section {
 #about_jazzcontreband {
   position: relative;
   top: -50px;
+  z-index: 30;
 
   @media (min-width: $mobile_width) {
     top: -180px;
@@ -224,7 +225,7 @@ section {
 
 #agenda_front {
   position: relative;
-  z-index: 10;
+  z-index: 29;
   a {
     text-decoration: none;
   }
