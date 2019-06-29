@@ -1,21 +1,9 @@
 nav {
-  background: $brand_color;
   text-align: center;
   padding: 0;
   margin: 0;
   position: relative;
   z-index: 100;
-
-  .stripes_top {
-    background: url("../img/stripes_top.png") no-repeat-x top center;
-    background-size: 62px 52px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 121px;
-    z-index: 20;
-  }
 
   a#menu_button {
     display: block;
@@ -264,4 +252,23 @@ header {
       opacity: 0.6;
     }
   }
+}
+
+.stripes_top,
+.stripes_bottom {
+  background: url("../img/stripes_top.png") no-repeat top center;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 121px;
+  z-index: 20;
+}
+
+.stripes_bottom {
+  background-image: url("../img/stripes_bottom.png");
+  background-position: bottom center;
+  top: auto;
+  bottom: 0;
 }

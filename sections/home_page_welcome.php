@@ -40,7 +40,7 @@ $events = 	new WP_Query(array(
   </div>
 
 
-
+<div class="stripes_bottom"></div>
   <?php $image_url = ($image) ? $image['sizes']['large']  : $tdu . '/img/jazz_photo_1.jpg'; ?>
   <div id="header_background" style="background-image:url('<?php echo $image_url; ?>');"></div>
 </header>
@@ -112,6 +112,6 @@ $events = 	new WP_Query(array(
 
 
 
-    
+
   </div>
 </div>

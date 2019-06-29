@@ -16,5 +16,6 @@ if ( $image == NULL ||  $image == false) {
             </div>
         </div>
     </div>
+    								<div class="stripes_bottom"></div>
     <div id="header_background" class="event_bg" style="background-image:url('<?php echo $image; ?>')"></div>
 </header>
