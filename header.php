@@ -51,4 +51,5 @@
                     	<!-- <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-377"><a target="_blank" href="https://www.facebook.com/jazzcontreband"><i class="fa fa-facebook" aria-hidden="true"></i></a></li> -->
                     </ul>
                 </div>
+								<div class="stripes_top"></div>
             </nav>
