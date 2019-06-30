@@ -168,7 +168,7 @@
 
 
             <div id="ticketing" class="column small_column ">
-                <div class="yellow_box">
+                <div class="grey_box">
                     <hr >
                     <h3> Tarifs </h3>
                     <?php if(! $tarif_plein ) : ?>

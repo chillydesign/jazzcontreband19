@@ -319,6 +319,7 @@ section {
 #event_information {
   position: relative;
   top: -20px;
+  z-index: 20;
 
   @media (min-width: $mobile_width) {
     top: -150px;
@@ -343,6 +344,7 @@ section {
 #ticketing {
   position: relative;
   top: -20px;
+  z-index: 20;
 
   @media (min-width: $mobile_width) {
     top: -50px;
