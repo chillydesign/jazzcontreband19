@@ -246,7 +246,8 @@ header {
     background: no-repeat center center;
     background-size: cover;
     // opacity: 0.4;
-    // filter: grayscale(1) blur(100px);
+    filter: grayscale(1);
+    // blur(100px)
     // animation: unBlur 5s forwards;
     &.event_bg {
       opacity: 0.6;
