@@ -93,6 +93,7 @@ $events = 	new WP_Query(array(
               <h6><?php echo $nice_dates; ?></h6>
               <p><strong>Something</strong></p>
               <h4><a href="<?php echo $permalink; ?>"><?php the_title(); ?></a></h4>
+              <?php var_dump($salle); ?>
               <p><?php if ($salle) : ?>
                   <?php echo $salle->post_title; ?>
               <?php endif; ?></p>
