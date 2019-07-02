@@ -92,11 +92,10 @@ $events = 	new WP_Query(array(
             <hr  />
             <div class="upcoming_event ">
               <h6><?php echo $nice_dates; ?></h6>
-
-              <?php var_dump($styles); ?>
-              <p><strong>--</strong></p>
+              <?php if ($styles): ?>
+              <p><strong><?php echo implode(', ', $styles); ?></strong></p>
+            <?php endif; ?>
               <h4><a href="<?php echo $permalink; ?>"><?php the_title(); ?></a></h4>
-
               <p><?php if ($salle) : ?>
                   <?php echo $salle->post_title; ?>
               <?php endif; ?></p>
