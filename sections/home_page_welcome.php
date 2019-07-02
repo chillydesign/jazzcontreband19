@@ -85,7 +85,7 @@ $events = 	new WP_Query(array(
             <?php $id =  get_the_ID(); ?>
             <?php $permalink =  get_the_permalink(); ?>
             <?php $dates = get_field('dates', $id, false);  ?>
-            <?php $salle = get_field('members', $id, false);  ?>
+            <?php $salle = get_field('members', $id);  ?>
             <?php $nice_dates =  nice_event_dates($dates) ; ?>
 
             <hr  />
