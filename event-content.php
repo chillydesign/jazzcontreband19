@@ -125,12 +125,10 @@
 
                 </div> <!-- END OF YELLOW BOX -->
 
-
-
-                <?php if(get_field('venue_gmap')) :
+                <?php $latlng = get_field('venue_gmap'); ?>
+                <?php if($latlng) :
 
                   $locations = [];
-                  $latlng = get_field('venue_gmap');
                   $latlngx = explode( ',', $latlng   );
                   $obj = new stdClass();
                   $obj->title = get_field('venue_name');
