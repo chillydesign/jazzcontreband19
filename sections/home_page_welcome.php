@@ -79,7 +79,7 @@ $events = 	new WP_Query(array(
 
           <h2>Prochainement</h2>
           <h4>Festival JCB - octobre 2019</h4>
-          <p><a href="https://webfactor.ch/projets/jazzcontreband/programme-festival/">Découvrez toute la programmation du festival JazzContreBand ici!</p>
+          <p><a href="<?php echo site_url('/programme-festival'); ?>">Découvrez toute la programmation du festival JazzContreBand ici!</a></p>
 
           <?php while ( $events->have_posts() ) : $events->the_post(); ?>
             <?php $id =  get_the_ID(); ?>
