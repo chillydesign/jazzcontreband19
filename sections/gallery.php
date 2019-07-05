@@ -2,7 +2,7 @@
 
 <?php if ($images) : ?>
 
-<div class="container">
+<div class="container" style="margin-top:50px">
 	<br>
 	<div class="img_gallery ">
 		<?php foreach($images as $image): ?>

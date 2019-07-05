@@ -15,7 +15,7 @@
                 </div>
             </div>
             <aside class="column small_column" >
-                <div class="yellow_box" id="calendar_box" >
+                <div class="black_box" id="calendar_box" >
                     <h4>Rechercher</h4>
 
                     <div id="events_calendar">

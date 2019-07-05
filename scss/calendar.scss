@@ -90,7 +90,7 @@ body.page-template-template-home #events_calendar {
 
         &.event {
           background-color: lighten($primary-color, 5);
-          color: white;
+          color: black;
           transition: background-color $transition_time;
           cursor: pointer;
           &:hover

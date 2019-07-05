@@ -78,7 +78,7 @@ $events = 	new WP_Query(array(
         <?php else: ?>
 
           <h2>Prochainement</h2>
-          <h4>Festival JCB - octobre 2019</h4>
+          <h4>Festival JazzContreBand - octobre 2019</h4>
           <p><a href="<?php echo site_url('/programme-festival'); ?>">Découvrez toute la programmation du festival JazzContreBand ici!</a></p>
 
           <?php while ( $events->have_posts() ) : $events->the_post(); ?>

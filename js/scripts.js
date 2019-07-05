@@ -202,7 +202,7 @@
                     template: $calendar_template,
                     forceSixRows: true,
                     events: data,
-                    startWithMonth: "2018-10-01",
+                    startWithMonth: "2019-10-01",
                     // constraints: {
                     // 		startDate: '2017-12-22',
                     // 		endDate: '2018-01-09'

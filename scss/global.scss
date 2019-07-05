@@ -301,6 +301,10 @@ section {
   position: absolute;
 }
 
+section.section.section_colonnes + section.section_upcoming {
+    margin-top: 30px;
+}
+
 .upcoming_event {
   h6 {
     font-size: 5em;
