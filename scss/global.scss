@@ -130,9 +130,11 @@ body {
   hr {
     border-bottom-color: $black;
   }
+  input[type="submit"],
   h6 a,
   a h6 {
     color: white !important;
+    background: $black;
   }
 }
 
