@@ -181,7 +181,7 @@
                             <?php endif;  // end of if $tarifs_reduits ?>
                             <?php if($tarif_passe_partout_jcb) : ?>
                                 <div class="pp_jcb"><p><strong>Tarif passe-partout JCB</strong>: <?php echo $tarif_passe_partout_jcb; ?></p></div>
-                                <h6><a target="_blank" href="https://etickets.infomaniak.com/shop/VjpxaBMv2i/"><i class="fa fa-key" aria-hidden="true"></i>  Acheter le passe-partout</a></h6>
+                                <h6><a target="_blank" href="https://etickets.infomaniak.com/shop/Da2TCvSh9o/"><i class="fa fa-key" aria-hidden="true"></i>  Acheter le passe-partout</a></h6>
                             <?php endif;  // end of if $tarif_passe_partout_jcb  ?>
                         </div>
                     <?php endif; ?>
