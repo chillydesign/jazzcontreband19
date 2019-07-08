@@ -103,7 +103,7 @@ function webfactor_header_scripts()
         wp_enqueue_script('modernizr'); // Enqueue it!
 
         $gkey = 'AIzaSyBvf6VrRRqDk5QwEGY6gavuqpSdpiMU_3k';
-        wp_register_script('wf_google_maps', '//maps.google.com/maps/api/js?key' . $gkey, array(), '', true); // Custom scripts
+        wp_register_script('wf_google_maps', '//maps.google.com/maps/api/js?key=' . $gkey, array(), '', true); // Custom scripts
         wp_enqueue_script('wf_google_maps'); // Enqueue it!
 
 
