@@ -6,22 +6,20 @@
  */
 
 /*------------------------------------*\
-	External Modules/Files
+    External Modules/Files
 \*------------------------------------*/
 
 // Load any external files you have here
 
 /*------------------------------------*\
-	Theme Support
+    Theme Support
 \*------------------------------------*/
 
-if (!isset($content_width))
-{
+if (!isset($content_width)) {
     $content_width = 900;
 }
 
-if (function_exists('add_theme_support'))
-{
+if (function_exists('add_theme_support')) {
     // Add Menu Support
     add_theme_support('menus');
 
@@ -34,21 +32,21 @@ if (function_exists('add_theme_support'))
 
     // Add Support for Custom Backgrounds - Uncomment below if you're going to use
     /*add_theme_support('custom-background', array(
-	'default-color' => 'FFF',
-	'default-image' => get_template_directory_uri() . '/img/bg.jpg'
+    'default-color' => 'FFF',
+    'default-image' => get_template_directory_uri() . '/img/bg.jpg'
     ));*/
 
     // Add Support for Custom Header - Uncomment below if you're going to use
     /*add_theme_support('custom-header', array(
-	'default-image'			=> get_template_directory_uri() . '/img/headers/default.jpg',
-	'header-text'			=> false,
-	'default-text-color'		=> '000',
-	'width'				=> 1000,
-	'height'			=> 198,
-	'random-default'		=> false,
-	'wp-head-callback'		=> $wphead_cb,
-	'admin-head-callback'		=> $adminhead_cb,
-	'admin-preview-callback'	=> $adminpreview_cb
+    'default-image'			=> get_template_directory_uri() . '/img/headers/default.jpg',
+    'header-text'			=> false,
+    'default-text-color'		=> '000',
+    'width'				=> 1000,
+    'height'			=> 198,
+    'random-default'		=> false,
+    'wp-head-callback'		=> $wphead_cb,
+    'admin-head-callback'		=> $adminhead_cb,
+    'admin-preview-callback'	=> $adminpreview_cb
     ));*/
 
     // Enables post and comment RSS feed links to head
@@ -59,36 +57,37 @@ if (function_exists('add_theme_support'))
 }
 
 /*------------------------------------*\
-	Functions
+    Functions
 \*------------------------------------*/
 
 // webfactor  navigationh
 function webfactor_nav()
 {
-	wp_nav_menu(
-	array(
-		'theme_location'  => 'header-menu',
-		'menu'            => '',
-		'container'       => 'div',
-		'container_class' => 'menu-{menu slug}-container',
-		'container_id'    => '',
-		'menu_class'      => 'menu',
-		'menu_id'         => '',
-		'echo'            => true,
-		'fallback_cb'     => 'wp_page_menu',
-		'before'          => '',
-		'after'           => '',
-		'link_before'     => '',
-		'link_after'      => '',
-		'items_wrap'      => '<ul>%3$s</ul>',
-		'depth'           => 0,
-		'walker'          => ''
-		)
-	);
+    wp_nav_menu(
+        array(
+        'theme_location'  => 'header-menu',
+        'menu'            => '',
+        'container'       => 'div',
+        'container_class' => 'menu-{menu slug}-container',
+        'container_id'    => '',
+        'menu_class'      => 'menu',
+        'menu_id'         => '',
+        'echo'            => true,
+        'fallback_cb'     => 'wp_page_menu',
+        'before'          => '',
+        'after'           => '',
+        'link_before'     => '',
+        'link_after'      => '',
+        'items_wrap'      => '<ul>%3$s</ul>',
+        'depth'           => 0,
+        'walker'          => ''
+        )
+    );
 }
 
-function wf_version(){
-  return '0.0.8';
+function wf_version()
+{
+    return '0.0.9';
 }
 
 // Load webfactor  scripts (header.php)webfactor
@@ -105,11 +104,6 @@ function webfactor_header_scripts()
         $gkey = 'AIzaSyBvf6VrRRqDk5QwEGY6gavuqpSdpiMU_3k';
         wp_register_script('wf_google_maps', '//maps.google.com/maps/api/js?key=' . $gkey, array(), '', true); // Custom scripts
         wp_enqueue_script('wf_google_maps'); // Enqueue it!
-
-
-
-
-
     }
 }
 
@@ -126,17 +120,17 @@ function webfactor_conditional_scripts()
 // Load webfactor  styles
 function webfactor_styles()
 {
+    wp_dequeue_style('wp-block-library');
 
-
-    wp_register_style('wf_style', get_template_directory_uri() . '/css/global.css', array(), wf_version(),  'all');
+    wp_register_style('wf_style', get_template_directory_uri() . '/css/global.css', array(), wf_version(), 'all');
     wp_enqueue_style('wf_style'); // Enqueue it!
 
     wp_register_style('featherlight', get_template_directory_uri() . '/css/featherlight.min.css', array(), '1.0', 'all');
-     wp_enqueue_style('featherlight'); // Enqueue it!
-     wp_register_style('featherlight-gallery', get_template_directory_uri() . '/css/featherlight.gallery.min.css', array(), '1.0', 'all');
-     wp_enqueue_style('featherlight-gallery'); // Enqueue it!
-     wp_register_style('justifiedGallery', get_template_directory_uri() . '/css/justifiedGallery.min.css', array(), '1.0', 'all');
-     wp_enqueue_style('justifiedGallery'); // Enqueue it!
+    wp_enqueue_style('featherlight'); // Enqueue it!
+    wp_register_style('featherlight-gallery', get_template_directory_uri() . '/css/featherlight.gallery.min.css', array(), '1.0', 'all');
+    wp_enqueue_style('featherlight-gallery'); // Enqueue it!
+    wp_register_style('justifiedGallery', get_template_directory_uri() . '/css/justifiedGallery.min.css', array(), '1.0', 'all');
+    wp_enqueue_style('justifiedGallery'); // Enqueue it!
 }
 
 // Register webfactor  Navigation
@@ -187,8 +181,7 @@ function add_slug_to_body_class($classes)
 }
 
 // If Dynamic Sidebar Exists
-if (function_exists('register_sidebar'))
-{
+if (function_exists('register_sidebar')) {
     // Define Sidebar Widget Area 1
     register_sidebar(array(
         'name' => __('Widget Area 1', 'webfactor'),
@@ -284,14 +277,14 @@ function webfactor_style_remove($tag)
 }
 
 // Remove thumbnail width and height dimensions that prevent fluid images in the_thumbnail
-function remove_thumbnail_dimensions( $html )
+function remove_thumbnail_dimensions($html)
 {
     $html = preg_replace('/(width|height)=\"\d*\"\s/', "", $html);
     return $html;
 }
 
 // Custom Gravatar in Settings > Discussion
-function webfactorgravatar ($avatar_defaults)
+function webfactorgravatar($avatar_defaults)
 {
     $myavatar = get_template_directory_uri() . '/img/gravatar.jpg';
     $avatar_defaults[$myavatar] = "Custom Gravatar";
@@ -302,7 +295,7 @@ function webfactorgravatar ($avatar_defaults)
 function enable_threaded_comments()
 {
     if (!is_admin()) {
-        if (is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
+        if (is_singular() and comments_open() and (get_option('thread_comments') == 1)) {
             wp_enqueue_script('comment-reply');
         }
     }
@@ -311,24 +304,25 @@ function enable_threaded_comments()
 // Custom Comments Callback
 function webfactorcomments($comment, $args, $depth)
 {
-	$GLOBALS['comment'] = $comment;
-	extract($args, EXTR_SKIP);
+    $GLOBALS['comment'] = $comment;
+    extract($args, EXTR_SKIP);
 
-	if ( 'div' == $args['style'] ) {
-		$tag = 'div';
-		$add_below = 'comment';
-	} else {
-		$tag = 'li';
-		$add_below = 'div-comment';
-	}
-?>
+    if ('div' == $args['style']) {
+        $tag = 'div';
+        $add_below = 'comment';
+    } else {
+        $tag = 'li';
+        $add_below = 'div-comment';
+    } ?>
     <!-- heads up: starting < for the html tag (li or div) in the next line: -->
-    <<?php echo $tag ?> <?php comment_class(empty( $args['has_children'] ) ? '' : 'parent') ?> id="comment-<?php comment_ID() ?>">
-	<?php if ( 'div' != $args['style'] ) : ?>
+    <<?php echo $tag ?> <?php comment_class(empty($args['has_children']) ? '' : 'parent') ?> id="comment-<?php comment_ID() ?>">
+	<?php if ('div' != $args['style']) : ?>
 	<div id="div-comment-<?php comment_ID() ?>" class="comment-body">
 	<?php endif; ?>
 	<div class="comment-author vcard">
-	<?php if ($args['avatar_size'] != 0) echo get_avatar( $comment, $args['180'] ); ?>
+	<?php if ($args['avatar_size'] != 0) {
+        echo get_avatar($comment, $args['180']);
+    } ?>
 	<?php printf(__('<cite class="fn">%s</cite> <span class="says">says:</span>'), get_comment_author_link()) ?>
 	</div>
 <?php if ($comment->comment_approved == '0') : ?>
@@ -336,24 +330,24 @@ function webfactorcomments($comment, $args, $depth)
 	<br />
 <?php endif; ?>
 
-	<div class="comment-meta commentmetadata"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>">
+	<div class="comment-meta commentmetadata"><a href="<?php echo htmlspecialchars(get_comment_link($comment->comment_ID)) ?>">
 		<?php
-			printf( __('%1$s at %2$s'), get_comment_date(),  get_comment_time()) ?></a><?php edit_comment_link(__('(Edit)'),'  ','' );
-		?>
+            printf(__('%1$s at %2$s'), get_comment_date(), get_comment_time()) ?></a><?php edit_comment_link(__('(Edit)'), '  ', ''); ?>
 	</div>
 
 	<?php comment_text() ?>
 
 	<div class="reply">
-	<?php comment_reply_link(array_merge( $args, array('add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+	<?php comment_reply_link(array_merge($args, array('add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
 	</div>
-	<?php if ( 'div' != $args['style'] ) : ?>
+	<?php if ('div' != $args['style']) : ?>
 	</div>
 	<?php endif; ?>
-<?php }
+<?php
+}
 
 /*------------------------------------*\
-	Actions + Filters + ShortCodes
+    Actions + Filters + ShortCodes
 \*------------------------------------*/
 
 // Add Actions
@@ -408,11 +402,11 @@ add_shortcode('webfactor_shortcode_demo_2', 'webfactor_shortcode_demo_2'); // Pl
 // [webfactor_shortcode_demo] [webfactor_shortcode_demo_2] Here's the page title! [/webfactor_shortcode_demo_2] [/webfactor_shortcode_demo]
 
 /*------------------------------------*\
-	Custom Post Types
+    Custom Post Types
 \*------------------------------------*/
 
 /*------------------------------------*\
-	ShortCode Functions
+    ShortCode Functions
 \*------------------------------------*/
 
 // Shortcode Demo with Nested Capability
@@ -430,10 +424,10 @@ function webfactor_shortcode_demo_2($atts, $content = null) // Demo Heading H2 s
 
 
 
-function chilly_nav($menu){
-
+function chilly_nav($menu)
+{
     wp_nav_menu(
-    array(
+        array(
         'theme_location'  => $menu,
         'menu'            => '',
         'container'       => 'div',
@@ -452,14 +446,13 @@ function chilly_nav($menu){
         'walker'          => ''
         )
     );
-
 }
 
-function chilly_map( $atts, $content = null ) {
-
-    $attributes = shortcode_atts( array(
+function chilly_map($atts, $content = null)
+{
+    $attributes = shortcode_atts(array(
         'title' => "Rue du Midi 15 Case postale 411 1020 Renens"
-    ), $atts );
+    ), $atts);
 
 
 
@@ -467,54 +460,54 @@ function chilly_map( $atts, $content = null ) {
     $chilly_map = '<div id="map_container_1"></div>';
     $chilly_map .= "<script> var latt = 46.5380683; var lonn=6.5812023; var map_title = '" . $title . "'  </script>";
     return $chilly_map;
-
 }
-add_shortcode( 'chilly_map', 'chilly_map' );
+add_shortcode('chilly_map', 'chilly_map');
 
 
-function disable_wp_emojicons() {
+function disable_wp_emojicons()
+{
 
   // all actions related to emojis
-  remove_action( 'admin_print_styles', 'print_emoji_styles' );
-  remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-  remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
-  remove_action( 'wp_print_styles', 'print_emoji_styles' );
-  remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
-  remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
-  remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+    remove_action('admin_print_styles', 'print_emoji_styles');
+    remove_action('wp_head', 'print_emoji_detection_script', 7);
+    remove_action('admin_print_scripts', 'print_emoji_detection_script');
+    remove_action('wp_print_styles', 'print_emoji_styles');
+    remove_filter('wp_mail', 'wp_staticize_emoji_for_email');
+    remove_filter('the_content_feed', 'wp_staticize_emoji');
+    remove_filter('comment_text_rss', 'wp_staticize_emoji');
 
-  // filter to remove TinyMCE emojis
+    // filter to remove TinyMCE emojis
   // add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
 }
-add_action( 'init', 'disable_wp_emojicons' );
+add_action('init', 'disable_wp_emojicons');
 
 
-function remove_json_api () {
+function remove_json_api()
+{
 
     // Remove the REST API lines from the HTML Header
-    remove_action( 'wp_head', 'rest_output_link_wp_head', 10 );
-    remove_action( 'wp_head', 'wp_oembed_add_discovery_links', 10 );
+    remove_action('wp_head', 'rest_output_link_wp_head', 10);
+    remove_action('wp_head', 'wp_oembed_add_discovery_links', 10);
     // Remove the REST API endpoint.
-    remove_action( 'rest_api_init', 'wp_oembed_register_route' );
+    remove_action('rest_api_init', 'wp_oembed_register_route');
     // Turn off oEmbed auto discovery.
-    add_filter( 'embed_oembed_discover', '__return_false' );
+    add_filter('embed_oembed_discover', '__return_false');
     // Don't filter oEmbed results.
-    remove_filter( 'oembed_dataparse', 'wp_filter_oembed_result', 10 );
+    remove_filter('oembed_dataparse', 'wp_filter_oembed_result', 10);
     // Remove oEmbed discovery links.
-    remove_action( 'wp_head', 'wp_oembed_add_discovery_links' );
+    remove_action('wp_head', 'wp_oembed_add_discovery_links');
     // Remove oEmbed-specific JavaScript from the front-end and back-end.
-    remove_action( 'wp_head', 'wp_oembed_add_host_js' );
-   // Remove all embeds rewrite rules.
+    remove_action('wp_head', 'wp_oembed_add_host_js');
+    // Remove all embeds rewrite rules.
   // add_filter( 'rewrite_rules_array', 'disable_embeds_rewrites' );
-
 }
-add_action( 'after_setup_theme', 'remove_json_api' );
+add_action('after_setup_theme', 'remove_json_api');
 
 
 
 
-function count_to_bootstrap_class($count){
-
+function count_to_bootstrap_class($count)
+{
     if ($count == 1) {
         $class = 'col-sm-12';
     } elseif ($count == 2) {
@@ -523,7 +516,7 @@ function count_to_bootstrap_class($count){
         $class = 'col-sm-4';
     } elseif ($count == 4) {
         $class = 'col-sm-3 col-xs-6';
-    } elseif ($count <= 6 ) {
+    } elseif ($count <= 6) {
         $class = 'col-sm-2';
     } else {
         $class = 'col-sm-1';
@@ -531,13 +524,12 @@ function count_to_bootstrap_class($count){
     return $class;
 };
 
-function thumbnail_of_post_url( $post_id,  $size='large'  ) {
-
-     $image_id = get_post_thumbnail_id(  $post_id );
-     $image_url = wp_get_attachment_image_src($image_id, $size  );
-     $image = $image_url[0];
-     return $image;
-
+function thumbnail_of_post_url($post_id, $size='large')
+{
+    $image_id = get_post_thumbnail_id($post_id);
+    $image_url = wp_get_attachment_image_src($image_id, $size);
+    $image = $image_url[0];
+    return $image;
 }
 
 
@@ -547,22 +539,24 @@ include('functions_create_reperage.php');
 
 
 
-function admin_default_page() {
+function admin_default_page()
+{
     $redirectto = get_home_url() . '/espace-membres';
-  return $redirectto;
+    return $redirectto;
 }
 
 add_filter('login_redirect', 'admin_default_page');
 
 
-add_filter( 'the_password_form', 'custom_password_form' );
-function custom_password_form() {
+add_filter('the_password_form', 'custom_password_form');
+function custom_password_form()
+{
     global $post;
-    $label = 'pwbox-'.( empty( $post->ID ) ? rand() : $post->ID );
-    $o = '<form class="protected-post-form" action="' . esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '"
+    $label = 'pwbox-'.(empty($post->ID) ? rand() : $post->ID);
+    $o = '<form class="protected-post-form" action="' . esc_url(site_url('wp-login.php?action=postpass', 'login_post')) . '"
  method="post">
-    ' . __( "<section class=\"section  section_colonnes\"><div class=\"container section1col\"><div class=\"column_container\"><div class=\"sectioncol col-sm-12 white colnmb1\"><div class=\"content\"><h1 style=\"text-align: center;margin-bottom:40px;\">Espace Presse</h1></div></div></div></div></section><section class=\"section  section_colonnes yellow_box\" style=\"padding-top:50px;\"><div class=\"container section2col\"><div class=\"column_container\"><div class=\"sectioncol column stripes colnmb1\" style=\"height: 569px;\"><div class=\"title\"><h2><strong>CONNEXION</strong></a></h2></div><div class=\"content\"><p style = \"margin-botton:-10px\">Pour accéder à l’espace presse, merci d’entrer le mot de passe :</p>" ) . '
-    <label class="pass-label" for="' . $label . '">' . __( "Mot de passe:" ) . ' </label><input name="post_password" id="' . $label . '" type="password" style="background: #ffffff; border:1px solid #999; color:#333333; padding:10px;" size="20" /><input type="submit" name="Submit" class="button" value="' . esc_attr__( "Envoyer" ) . '" />
+    ' . __("<section class=\"section  section_colonnes\"><div class=\"container section1col\"><div class=\"column_container\"><div class=\"sectioncol col-sm-12 white colnmb1\"><div class=\"content\"><h1 style=\"text-align: center;margin-bottom:40px;\">Espace Presse</h1></div></div></div></div></section><section class=\"section  section_colonnes yellow_box\" style=\"padding-top:50px;\"><div class=\"container section2col\"><div class=\"column_container\"><div class=\"sectioncol column stripes colnmb1\" style=\"height: 569px;\"><div class=\"title\"><h2><strong>CONNEXION</strong></a></h2></div><div class=\"content\"><p style = \"margin-botton:-10px\">Pour accéder à l’espace presse, merci d’entrer le mot de passe :</p>") . '
+    <label class="pass-label" for="' . $label . '">' . __("Mot de passe:") . ' </label><input name="post_password" id="' . $label . '" type="password" style="background: #ffffff; border:1px solid #999; color:#333333; padding:10px;" size="20" /><input type="submit" name="Submit" class="button" value="' . esc_attr__("Envoyer") . '" />
     </form><p style="font-size:14px;margin:0px;"></div></div><div class="sectioncol column checkers colnmb2"><div class="title"><h2><strong>DEMANDE D\'ACCÈS</strong></h2></div><div class="content"><p>Pour obtenir le code d’accès, veuillez contacter:</p><p><strong>Agathe Denis</strong><br>Coordinatrice JazzContreBand<br>agathe@jazzcontreband.com</p></div></div></div></div></section>
     ';
     return $o;
@@ -611,25 +605,24 @@ $args = array(
     'autoload' => false,
 
 );
-acf_add_options_page( $args );
+acf_add_options_page($args);
 
 
 
 
-function nice_event_dates($dates) {
-
+function nice_event_dates($dates)
+{
     if (sizeof($dates) == 0) {
         return '-';
-    } else if (sizeof($dates) == 1) {
-        $nice_date =  strftime( '%d.%m', strtotime( current($dates[0]) ));
+    } elseif (sizeof($dates) == 1) {
+        $nice_date =  strftime('%d.%m', strtotime(current($dates[0])));
         return $nice_date;
     } else {
         $first = current($dates);
         $last = end($dates);
-        $nice_first =  strftime( '%d', strtotime( current($first ) ));
-        $nice_last =  strftime( '%d.%m', strtotime( current($last ) ));
+        $nice_first =  strftime('%d', strtotime(current($first)));
+        $nice_last =  strftime('%d.%m', strtotime(current($last)));
         return $nice_first . ' → '  . $nice_last;
-
     }
 }
 
