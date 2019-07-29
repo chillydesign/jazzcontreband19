@@ -3,7 +3,8 @@ footer {
   background: $black;
   color: $light_grey;
   margin:0;
-  padding:30px 0 0px;
+  padding: 110px 0 0px;
+  position: relative;
 
   p {
     padding: 0 0 30px;
@@ -19,6 +20,10 @@ footer {
     &:hover {
       color: white;
     }
+  }
+
+  .footer_top {
+
   }
 
   #footer_bg {

@@ -46,14 +46,16 @@
     <p>
       &copy; <?php echo date('Y'); ?>  <?php bloginfo('name'); ?> | Website by <a href="//webfactor.ch" title="Webfactor">Webfactor</a>
 
-      <?php if(is_user_logged_in()) : ?>
-        | <a class="logout" href="<?php echo wp_logout_url( site_url('/')  ); ?>">Déconnexion</a>
+      <?php if (is_user_logged_in()) : ?>
+        | <a class="logout" href="<?php echo wp_logout_url(site_url('/')); ?>">Déconnexion</a>
       <?php else: ?>
         | <a class="login" href="<?php echo  site_url('/login'); ?>">Connexion Membres</a>
       <?php endif; ?>
     </p>
 
   </div>
+
+  			<div class="stripes_top"></div>
   <div id="footer_bg"></div>
 </footer>
 <!-- /footer -->
@@ -71,7 +73,7 @@
 
 
 
-<?php if(!is_user_logged_in()) : ?>
+<?php if (!is_user_logged_in()) : ?>
   <div class="loginformcontainer">
     <div>
       <div class="loginform black_box insideform">
@@ -92,7 +94,9 @@
         <div class="login_fields">
           <?php do_action('login_form', 'resetpass'); ?>
           <input type="submit" name="user-submit" value="<?php _e('Réinitialiser mon mot de passe'); ?>" class="user-submit" tabindex="1002" />
-          <?php $reset = $_GET['reset']; if($reset == true) { echo '<p>Un message a été envoyé sur votre adresse email.</p>'; } ?>
+          <?php $reset = $_GET['reset']; if ($reset == true) {
+    echo '<p>Un message a été envoyé sur votre adresse email.</p>';
+} ?>
           <input type="hidden" name="redirect_to" value="<?php echo esc_attr($_SERVER['REQUEST_URI']); ?>?reset=true" />
           <input type="hidden" name="user-cookie" value="1" />
         </div>
