@@ -3,7 +3,7 @@ global $image;
 
 if ( $image == NULL ||  $image == false) {
      //$image = get_template_directory_uri() . '/img/placeholder.jpg';
-     $image = get_site_url() . '/wp-content/uploads/2019/07/jcb2019.jpg';
+     $image = get_site_url() . '/wp-content/uploads/2020/01/13.jpg')';
 };
  ?>
 <header>
