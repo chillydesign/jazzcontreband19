@@ -9,7 +9,7 @@ $small_bottom_box_content =  get_sub_field('blue_box_content');
 
 $today = date("Ymd");
 $events = 	new WP_Query(array(
-  'post_type' => 'evenement_festival',
+  'post_type' => 'evenement_saison',
   'posts_per_page' => 3,
   'meta_key'   => 'dates_0_date',
   'orderby'    => 'meta_value_num',
@@ -78,8 +78,8 @@ $events = 	new WP_Query(array(
         <?php else: ?>
 
           <h2>Prochainement</h2>
-          <h4>Festival JazzContreBand - octobre 2019</h4>
-          <p><a href="<?php echo site_url('/programme-festival'); ?>">Découvrez toute la programmation du festival JazzContreBand ici!</a></p>
+          <h4>Saison JazzContreBand - 2019-2020</h4>
+          <p><a href="<?php echo site_url('/programme-festival'); ?>">Découvrez toute la programmation JazzContreBand ici!</a></p>
 
           <?php while ( $events->have_posts() ) : $events->the_post(); ?>
             <?php $id =  get_the_ID(); ?>
